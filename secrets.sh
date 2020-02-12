@@ -460,7 +460,7 @@ EOF
     ${HELM_BIN} "$cmd" $subcmd "$@" "${cmdopts[@]}"
     helm_exit_code=$?
     # cleanup on-the-fly decrypted files
-    [[ ${#decfiles[@]} -gt 0 ]] && rm -v "${decfiles[@]}"
+    [[ ${#decfiles[@]} -gt 0 ]] && rm "${decfiles[@]}"
 }
 
 helm_command() {
